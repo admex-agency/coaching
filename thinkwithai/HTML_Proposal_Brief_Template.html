@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>HTML Proposal Brief Template</title>
+<style>
+:root{--bg:#f3f1ec;--paper:#fff;--ink:#12130f;--muted:#666960;--line:#d8d7cf;--accent:#29D122;--dark:#12130f;--lime:#29D122;--max:1180px}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}.wrap{width:min(calc(100% - 36px),var(--max));margin:auto}header{padding:38px 0 24px}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:850}.top h1{font-size:clamp(46px,7vw,88px);line-height:.92;letter-spacing:-.058em;margin:10px 0 18px}.top p{max-width:720px;color:var(--muted);font-size:18px}.badge{background:var(--dark);color:white;border-radius:18px;padding:22px;min-width:210px}.badge b{font-size:36px}.note{background:#fff3ee;border:1px solid #ffd5c8;border-radius:16px;padding:18px 20px;margin:24px 0 32px}.brief{background:white;border-radius:24px;box-shadow:0 22px 65px rgba(25,25,20,.09);overflow:hidden}.section{padding:30px;border-bottom:1px solid var(--line)}.section:last-child{border-bottom:0}.section-head{display:grid;grid-template-columns:60px 1fr;gap:14px}.num{width:44px;height:44px;border-radius:14px;background:var(--dark);color:white;display:grid;place-items:center;font-weight:850}.section h2{font-size:27px;line-height:1.1;margin:4px 0 8px}.section p{margin:0;color:var(--muted)}.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}.field{border:1px solid var(--line);border-radius:15px;padding:16px;background:#fbfaf6}.field.full{grid-column:1/-1}.field b{display:block;font-size:12px;letter-spacing:.09em;text-transform:uppercase;margin-bottom:9px}.editable{min-height:72px;color:#55584f;outline:none}.editable:focus{color:var(--ink)}.editable:empty:before{content:attr(data-placeholder);color:#aaa}.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:14px}.check{padding:11px 13px;border:1px solid var(--line);border-radius:12px;background:white;font-size:14px}.prompt{margin:30px 0;background:var(--dark);color:white;border-radius:24px;padding:28px}.prompt h2{font-size:32px;margin:4px 0 12px}.prompt p{color:#bdc0b8}.prompt-box{white-space:pre-wrap;background:#1d1f19;border:1px solid rgba(255,255,255,.12);border-radius:15px;padding:18px;color:#e9eae5;font-size:14px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.btn{border:0;border-radius:999px;padding:12px 16px;font-weight:850;cursor:pointer}.primary{background:var(--lime);color:var(--ink)}.secondary{background:white;color:var(--ink)}footer{padding:28px 0 44px;color:var(--muted);font-size:13px}@media(max-width:760px){.top,.fields,.section-head{grid-template-columns:1fr}.top{display:grid}.badge{min-width:0}.field.full{grid-column:auto}.checklist{grid-template-columns:1fr}.section{padding:22px}}@media print{.actions,.note{display:none}.brief{box-shadow:none}.editable:empty:before{content:""}.prompt{background:white;color:black;border:1px solid #bbb}.prompt p,.prompt-box{color:#333}.prompt-box{background:white;border-color:#ccc}}
+</style>
+</head>
+<body>
+<header><div class="wrap top"><div><div class="eyebrow">Tài liệu thực hành · AI-Native Working</div><h1>HTML Proposal Brief</h1><p>Điền brief này trước khi gửi yêu cầu cho ChatGPT. Mục tiêu không phải mô tả một website đẹp, mà làm rõ vấn đề, người đọc, narrative, trải nghiệm và tiêu chuẩn đầu ra.</p></div><aside class="badge"><div class="eyebrow" style="color:#b9bbb3">Framework</div><b>4Đ</b><div>Đặt lại · Định hình<br>Dựng thử · Điều chỉnh</div></aside></div></header>
+<main class="wrap">
+<div class="note"><b>Cách sử dụng:</b> Nhấp vào từng ô để điền nội dung. Khi hoàn tất, chọn “Sao chép brief & prompt” rồi gửi kèm các file nội dung, hình ảnh và tài sản thương hiệu cho ChatGPT.</div>
+<div class="brief" id="briefContent">
+<section class="section"><div class="section-head"><div class="num">01</div><div><h2>Đặt lại bài toán</h2><p>Không bắt đầu từ format. Bắt đầu từ thay đổi mà đầu ra cần tạo ra.</p></div></div><div class="fields">
+<div class="field full"><b>Bối cảnh và vấn đề cần giải quyết</b><div class="editable" contenteditable="true" data-placeholder="Dự án tồn tại vì điều gì? Vấn đề hiện tại là gì?"></div></div>
+<div class="field"><b>Mục tiêu kinh doanh</b><div class="editable" contenteditable="true" data-placeholder="Kết quả kinh doanh cần hỗ trợ..."></div></div>
+<div class="field"><b>Mục tiêu truyền thông</b><div class="editable" contenteditable="true" data-placeholder="Nhận thức, niềm tin hoặc hành động cần tạo ra..."></div></div>
+<div class="field"><b>Đối tượng đọc</b><div class="editable" contenteditable="true" data-placeholder="Ai scan, ai đọc sâu, ai phê duyệt?"></div></div>
+<div class="field"><b>Quyết định cần thúc đẩy</b><div class="editable" contenteditable="true" data-placeholder="Sau khi xem, họ cần đồng ý hoặc làm gì?"></div></div>
+</div></section>
+<section class="section"><div class="section-head"><div class="num">02</div><div><h2>Định hình nội dung và câu chuyện</h2><p>Xác định hierarchy trước khi nghĩ đến giao diện.</p></div></div><div class="fields">
+<div class="field"><b>Thông điệp trung tâm</b><div class="editable" contenteditable="true" data-placeholder="Một câu người xem cần nhớ..."></div></div>
+<div class="field"><b>Bằng chứng quan trọng</b><div class="editable" contenteditable="true" data-placeholder="Dữ liệu, case, hình ảnh, testimonial..."></div></div>
+<div class="field full"><b>Nội dung phải thấy</b><div class="editable" contenteditable="true" data-placeholder="Các ý bắt buộc xuất hiện ngay hoặc có visual weight cao..."></div></div>
+<div class="field"><b>Nội dung nên thấy</b><div class="editable" contenteditable="true" data-placeholder="Thông tin cần có nhưng không phải trọng tâm..."></div></div>
+<div class="field"><b>Chi tiết hỗ trợ</b><div class="editable" contenteditable="true" data-placeholder="Có thể đưa vào accordion, modal, phụ lục..."></div></div>
+<div class="field full"><b>Narrative mong muốn</b><div class="editable" contenteditable="true" data-placeholder="Ví dụ: Bối cảnh → Vấn đề → Cơ hội → Giải pháp → Bằng chứng → Kế hoạch → Next step"></div></div>
+</div></section>
+<section class="section"><div class="section-head"><div class="num">03</div><div><h2>Định hình trải nghiệm</h2><p>Chỉ dùng interaction và motion khi chúng giúp hiểu nhanh hơn hoặc giảm tải nhận thức.</p></div></div><div class="fields">
+<div class="field"><b>Format chính</b><div class="editable" contenteditable="true" data-placeholder="Proposal, executive brief, microsite, operation hub..."></div></div>
+<div class="field"><b>Thời gian và thiết bị đọc</b><div class="editable" contenteditable="true" data-placeholder="Đọc nhanh 5 phút trên laptop? Xem mobile? Trình chiếu?"></div></div>
+<div class="field full"><b>Tương tác cần thiết</b><div class="editable" contenteditable="true" data-placeholder="Menu chapter, accordion, zoom tài liệu, filter, map, comparison, timeline..."></div></div>
+<div class="field"><b>Motion cần thiết</b><div class="editable" contenteditable="true" data-placeholder="Motion dùng để reveal, orient, connect hay explain?"></div></div>
+<div class="field"><b>Mobile redesign</b><div class="editable" contenteditable="true" data-placeholder="Nội dung nào ưu tiên, interaction nào phải thay đổi trên mobile?"></div></div>
+</div></section>
+<section class="section"><div class="section-head"><div class="num">04</div><div><h2>Định hướng thẩm mỹ và trải nghiệm</h2><p>Biến cảm nhận chủ quan thành tiêu chuẩn đủ rõ để AI có thể thực thi.</p></div></div><div class="fields">
+<div class="field"><b>Reference mong muốn</b><div class="editable" contenteditable="true" data-placeholder="Ví dụ: Apple.com, Monocle, Stripe... Vì sao chọn reference này?"></div></div>
+<div class="field"><b>Phong cách chủ đạo</b><div class="editable" contenteditable="true" data-placeholder="Clean, minimal, editorial, premium, technical, documentary..."></div></div>
+<div class="field"><b>Cảm nhận cần tạo ra</b><div class="editable" contenteditable="true" data-placeholder="Tin cậy, sắc sảo, truyền cảm hứng, điềm tĩnh, tiên phong..."></div></div>
+<div class="field"><b>Mức độ tối giản / mật độ</b><div class="editable" contenteditable="true" data-placeholder="Nhiều khoảng trắng hay data-dense? Headline lớn hay tiết chế?"></div></div>
+<div class="field full"><b>Đặc điểm cần học từ reference</b><div class="editable" contenteditable="true" data-placeholder="Ví dụ: hierarchy rõ, typography clean, spacing rộng, motion subtle, hình ảnh chất lượng cao. Không yêu cầu sao chép layout."></div></div>
+<div class="field"><b>Hình ảnh và typography</b><div class="editable" contenteditable="true" data-placeholder="Ảnh documentary hay polished? Font brand hay system font? Weight và scale mong muốn?"></div></div>
+<div class="field"><b>Nhịp đọc và motion</b><div class="editable" contenteditable="true" data-placeholder="Đọc nhanh hay khám phá? Motion dùng để orient, reveal, connect hay explain?"></div></div>
+<div class="field full"><b>Điều tuyệt đối cần tránh</b><div class="editable" contenteditable="true" data-placeholder="Ví dụ: quá nhiều card, gradient/glow, glassmorphism, chữ quá dày, giống PowerPoint, bắt chước Apple..."></div></div>
+</div></section>
+<section class="section"><div class="section-head"><div class="num">05</div><div><h2>Tài sản và ràng buộc</h2><p>Bảo toàn nội dung đã duyệt và làm rõ những gì AI không được tự ý thay đổi.</p></div></div><div class="fields">
+<div class="field"><b>Brand guideline</b><div class="editable" contenteditable="true" data-placeholder="Màu, font, logo, phong cách, điều cần tránh..."></div></div>
+<div class="field"><b>Tài sản được cung cấp</b><div class="editable" contenteditable="true" data-placeholder="PDF, Word, Excel, hình ảnh, video, logo, font..."></div></div>
+<div class="field full"><b>Nội dung đã được duyệt / không được thay đổi</b><div class="editable" contenteditable="true" data-placeholder="Liệt kê rõ các đoạn legal, con số, claim, cam kết..."></div></div>
+<div class="field"><b>Ràng buộc kỹ thuật</b><div class="editable" contenteditable="true" data-placeholder="Một file HTML, không thư viện ngoài, cần deploy GitHub..."></div></div>
+<div class="field"><b>Yêu cầu đầu ra</b><div class="editable" contenteditable="true" data-placeholder="Responsive, print 16:9, download PDF, bilingual..."></div></div>
+</div></section>
+<section class="section"><div class="section-head"><div class="num">06</div><div><h2>Tiêu chuẩn review</h2><p>Định nghĩa “đạt” trước khi AI bắt đầu dựng.</p></div></div><div class="checklist">
+<div class="check">□ Mục tiêu và quyết định cần thúc đẩy rõ ràng</div><div class="check">□ Mỗi section chỉ thực hiện một nhiệm vụ</div><div class="check">□ Hierarchy vẫn rõ khi bỏ màu và hiệu ứng</div><div class="check">□ Tương tác có entry và exit dễ hiểu</div><div class="check">□ Mobile không phải desktop thu nhỏ</div><div class="check">□ Nội dung đã duyệt được bảo toàn</div><div class="check">□ Không lạm dụng card, gradient, glow, animation</div><div class="check">□ Có thể sử dụng khi motion hoặc hình ảnh bị tắt</div>
+</div><div class="fields"><div class="field full"><b>Tiêu chí riêng của dự án</b><div class="editable" contenteditable="true" data-placeholder="Điều gì khiến sản phẩm này được xem là thành công?"></div></div></div></section>
+</div>
+<section class="prompt"><div class="eyebrow" style="color:var(--lime)">Prompt khởi tạo</div><h2>Yêu cầu AI tư duy trước khi code</h2><p>Brief là đầu vào. Prompt dưới đây là cách yêu cầu ChatGPT chuyển từ brief sang một phương án thiết kế có lý do.</p><div class="prompt-box" id="promptText">Dựa trên HTML Proposal Brief tôi cung cấp, hãy làm việc như một Strategic Director, Information Architect, UX Designer, Visual Designer và Front-end Architect.
+
+Trước khi viết code:
+1. Chẩn đoán mục tiêu, người đọc, quyết định cần thúc đẩy và rào cản nhận thức.
+2. Phân loại nội dung thành: phải thấy, nên thấy, chi tiết hỗ trợ và phần có thể loại bỏ.
+3. Đề xuất narrative và section blueprint; mỗi section phải có một nhiệm vụ rõ ràng.
+4. Giải mã định hướng thẩm mỹ thành các quyết định cụ thể về hierarchy, typography, spacing, hình ảnh, mật độ nội dung, interaction và motion. Reference chỉ dùng để hiểu tiêu chuẩn, không sao chép layout.
+5. Đề xuất một hướng trải nghiệm HTML phù hợp, gồm navigation, progressive disclosure, interaction, motion và mobile redesign.
+6. Chỉ sau khi cấu trúc đã hợp lý mới triển khai một file HTML hoàn chỉnh, responsive, có semantic HTML, CSS variables, reduced-motion support và không làm thay đổi nội dung đã duyệt.
+
+Không dùng hiệu ứng để che lấp tư duy yếu. Không mặc định dùng card, gradient, glassmorphism hoặc animation. Ưu tiên hierarchy, khoảng trắng, khả năng đọc, bằng chứng và trải nghiệm người dùng. Bám sát phong cách, cảm nhận và các điều cần tránh đã nêu trong brief; không diễn giải “premium” hoặc “giống Apple” theo cách rập khuôn.</div><div class="actions"><button class="btn primary" onclick="copyAll()">Sao chép brief & prompt</button><button class="btn secondary" onclick="window.print()">In / Lưu PDF</button></div></section>
+</main><footer><div class="wrap">HTML Proposal Brief Template · AI-Native Working Series</div></footer>
+<script>
+function textOf(el){return el.innerText.trim()||'[Chưa điền]'}
+function copyAll(){
+ const sections=[...document.querySelectorAll('#briefContent .section')];
+ let out='HTML PROPOSAL BRIEF\n\n';
+ sections.forEach(sec=>{out+=sec.querySelector('h2').innerText.toUpperCase()+'\n';sec.querySelectorAll('.field').forEach(f=>{out+='- '+f.querySelector('b').innerText+': '+textOf(f.querySelector('.editable'))+'\n'});out+='\n'});
+ out+='PROMPT KHỞI TẠO\n'+document.getElementById('promptText').innerText;
+ navigator.clipboard.writeText(out).then(()=>alert('Đã sao chép brief và prompt.')).catch(()=>alert('Không thể sao chép tự động. Hãy chọn và sao chép thủ công.'));
+}
+</script>
+</body></html>
