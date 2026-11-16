@@ -273,6 +273,9 @@ nav a:last-child{background:#e2f4e9;color:#205a37}
 @media(max-width:830px){.imc-overview-grid{grid-template-columns:1fr}.imc-overview-intro h2{max-width:18ch}}
 @media(max-width:600px){.imc-check-questions{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.section-enter .imc-icon-motion{animation:none}}
+.impact-branch-preview ul{user-select:none}
+.impact-branch-preview li{min-height:24px;display:flex;align-items:center}
+.impact-branch-preview li span{height:6px;border-radius:4px;background:#86a89b;opacity:.68;filter:blur(2.4px)}
 </style>
 </head>
 <body id="top">
@@ -337,7 +340,7 @@ nav a:last-child{background:#e2f4e9;color:#205a37}
 <section class="section map-section" id="framework-map"><div class="wrap">
 <div class="map-heading"><p class="eyebrow mono">Tài liệu coaching</p><h2>Sơ đồ I.M.P.A.C.T Framework</h2></div>
 <figure class="framework-map" aria-label="Sơ đồ chi tiết sáu bước I.M.P.A.C.T">
-<figcaption>Mở từng bước để xem các hạng mục, công cụ và đầu việc tương ứng.</figcaption>
+<figcaption>Mở từng bước để xem sơ đồ. Nội dung làm mờ sẽ được trình bày trong buổi coaching.</figcaption>
 <div class="impact-stages">
 <details class="impact-stage" open>
   <summary><span class="impact-letter" aria-hidden="true">I</span><strong>Input</strong><span class="impact-expand" aria-hidden="true"></span></summary>
@@ -352,31 +355,31 @@ nav a:last-child{background:#e2f4e9;color:#205a37}
   <div class="impact-branches">
     <article class="impact-branch"><h3>Tổ chức công việc</h3><ul><li>Kiểm tra khối lượng hiện tại</li><li>Phân công nhân sự</li><li>Lập phương án và timeline</li></ul></article>
     <article class="impact-branch"><h3>Xác lập hướng chiến lược</h3><ul><li>G.O.S.T. · Goals, Objectives, Strategies, Tactics</li><li>SMART cho mục tiêu kinh doanh, marketing và truyền thông</li></ul></article>
-    <article class="impact-branch"><h3>Khoanh vùng đối tượng và thị trường</h3><ul><li>Địa lý, nhân khẩu học, tâm lý và hành vi</li><li>Nghiên cứu thị trường và đối thủ</li><li>Social listening, dữ liệu lịch sử, báo cáo, khảo sát và focus group</li></ul></article>
+    <article class="impact-branch impact-branch-preview"><h3>Khoanh vùng đối tượng và thị trường</h3><ul aria-hidden="true"><li><span style="width:63%"></span></li><li><span style="width:51%"></span></li><li><span style="width:75%"></span></li></ul></article>
   </div>
 </details>
 <details class="impact-stage">
   <summary><span class="impact-letter" aria-hidden="true">P</span><strong>Path</strong><span class="impact-expand" aria-hidden="true"></span></summary>
   <div class="impact-branches">
-    <article class="impact-branch"><h3>Xác lập insight</h3><ul><li>Insight về sản phẩm hoặc con người trong bối cảnh văn hóa</li><li>Truth–Tension–Motivation</li><li>Consumer–Company/Brand–Category Truth</li><li>Direction–Discovery–Double Check</li></ul></article>
-    <article class="impact-branch"><h3>Phát triển Big Idea</h3><ul><li>Bám nhiệm vụ truyền thông bằng Task Map</li><li>Kiểm tra khả năng triển khai, phạm vi và độ bền của ý tưởng</li><li>Chốt thông điệp chủ đạo hoặc thông điệp chiến dịch</li></ul></article>
-    <article class="impact-branch"><h3>Cụ thể hóa hướng sáng tạo</h3><ul><li>Câu chuyện truyền thông và concept</li><li>Minh họa TVC, phim ngắn hoặc chụp ảnh</li><li>Phác thảo phương án contest hoặc collab</li></ul></article>
+    <article class="impact-branch impact-branch-preview"><h3>Xác lập insight</h3><ul aria-hidden="true"><li><span style="width:77%"></span></li><li><span style="width:44%"></span></li><li><span style="width:50%"></span></li><li><span style="width:41%"></span></li></ul></article>
+    <article class="impact-branch impact-branch-preview"><h3>Phát triển Big Idea</h3><ul aria-hidden="true"><li><span style="width:62%"></span></li><li><span style="width:74%"></span></li><li><span style="width:61%"></span></li></ul></article>
+    <article class="impact-branch impact-branch-preview"><h3>Cụ thể hóa hướng sáng tạo</h3><ul aria-hidden="true"><li><span style="width:58%"></span></li><li><span style="width:55%"></span></li><li><span style="width:52%"></span></li></ul></article>
   </div>
 </details>
 <details class="impact-stage">
   <summary><span class="impact-letter" aria-hidden="true">A</span><strong>Action</strong><span class="impact-expand" aria-hidden="true"></span></summary>
   <div class="impact-branches">
-    <article class="impact-branch"><h3>Dựng các giai đoạn triển khai</h3><ul><li>Số giai đoạn theo yêu cầu chiến dịch</li><li>Mục tiêu, key hook, thông điệp và ngân sách từng giai đoạn</li><li>Quick wins, giải pháp theo 5W1H và chiến thuật hỗ trợ</li></ul></article>
-    <article class="impact-branch"><h3>Xây dựng chiến lược kênh</h3><ul><li>Mục tiêu, kế hoạch mua, chiến thuật, KPI và cách đo của từng kênh</li><li>STDC · See, Think, Do, Care</li><li>3H cho nội dung, phân tầng KOL/KOC và kế hoạch lan tỏa PR</li></ul></article>
-    <article class="impact-branch"><h3>Chuyển kế hoạch thành roadmap</h3><ul><li>Chọn công cụ phù hợp như sự kiện, activation hoặc roadshow</li><li>Phân bổ hạng mục và KPI trên roadmap</li><li>Chuẩn bị demo nội dung, chân dung KOL/KOC, demo quảng cáo và brief triển khai</li></ul></article>
+    <article class="impact-branch impact-branch-preview"><h3>Dựng các giai đoạn triển khai</h3><ul aria-hidden="true"><li><span style="width:59%"></span></li><li><span style="width:73%"></span></li><li><span style="width:64%"></span></li></ul></article>
+    <article class="impact-branch impact-branch-preview"><h3>Xây dựng chiến lược kênh</h3><ul aria-hidden="true"><li><span style="width:84%"></span></li><li><span style="width:47%"></span></li><li><span style="width:67%"></span></li></ul></article>
+    <article class="impact-branch impact-branch-preview"><h3>Chuyển kế hoạch thành roadmap</h3><ul aria-hidden="true"><li><span style="width:78%"></span></li><li><span style="width:54%"></span></li><li><span style="width:84%"></span></li></ul></article>
   </div>
 </details>
 <details class="impact-stage">
   <summary><span class="impact-letter" aria-hidden="true">C</span><strong>Costing</strong><span class="impact-expand" aria-hidden="true"></span></summary>
   <div class="impact-branches">
-    <article class="impact-branch"><h3>Chọn cách lập ngân sách</h3><ul><li>Top-down từ ngân sách tổng</li><li>Bottom-up theo từng hạng mục</li></ul></article>
-    <article class="impact-branch"><h3>Xác định căn cứ dự toán</h3><ul><li>Dữ liệu chi phí lịch sử hoặc dự toán cho hạng mục mới</li><li>Chính sách và điều kiện riêng của khách hàng</li></ul></article>
-    <article class="impact-branch"><h3>Rà soát phương án giá</h3><ul><li>Chiến lược và chính sách giá</li><li>Đối chiếu P&amp;L nội bộ</li></ul></article>
+    <article class="impact-branch impact-branch-preview"><h3>Chọn cách lập ngân sách</h3><ul aria-hidden="true"><li><span style="width:51%"></span></li><li><span style="width:48%"></span></li></ul></article>
+    <article class="impact-branch impact-branch-preview"><h3>Xác định căn cứ dự toán</h3><ul aria-hidden="true"><li><span style="width:74%"></span></li><li><span style="width:61%"></span></li></ul></article>
+    <article class="impact-branch impact-branch-preview"><h3>Rà soát phương án giá</h3><ul aria-hidden="true"><li><span style="width:53%"></span></li><li><span style="width:44%"></span></li></ul></article>
   </div>
 </details>
 <details class="impact-stage">
