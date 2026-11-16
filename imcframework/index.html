@@ -245,6 +245,33 @@ nav a:last-child{background:#e2f4e9;color:#205a37}
 .foot strong{display:block;margin-top:4px}
 @media(max-width:830px){.register .register-layout{grid-template-columns:1fr}.register-info .facts-list div{min-height:0}.coach-layout{width:calc(100% - 38px)}.foot>.wrap{grid-template-columns:1fr}}
 @media(max-width:540px){.coach-layout{grid-template-columns:1fr}.coach-copy{padding:26px}.coach-image{max-width:none;min-height:310px;border-top:1px solid #ffffffbe}}
+
+.imc-overview{background:radial-gradient(ellipse at 90% 18%,#e3f2ee,transparent 62%),#f4f9fc}
+.imc-overview-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5vw,68px);align-items:start}
+.imc-overview-intro h2{max-width:13ch}
+.imc-overview-intro p{color:var(--sub);margin-top:15px}
+.imc-overview-intro strong{color:var(--ink)}
+.imc-overview-flow{padding:clamp(16px,2.9vw,32px);border:1px solid #fff;border-radius:28px;background:var(--glass);box-shadow:var(--shadow)}
+.imc-flow-lead{margin:0 0 10px;color:var(--sub)}
+.imc-flow-item{display:grid;grid-template-columns:43px minmax(0,1fr);gap:12px;align-items:start;border-top:1px solid #d5e3e8;padding:13px 0}
+.imc-flow-item:last-child{padding-bottom:0}
+.imc-flow-item h3{font-size:18px;margin:0 0 3px}
+.imc-flow-item p{font-size:15px;color:var(--sub);margin:0}
+.imc-flow-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:#e6f3ee;color:#285f54}
+.imc-flow-icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round}
+.imc-icon-motion{transform-box:fill-box;transform-origin:center}
+.section-enter .imc-icon-motion{animation:imc-icon-reveal .72s ease-out both}
+.section-enter .imc-flow-item:nth-of-type(2) .imc-icon-motion{animation-delay:.16s}
+.section-enter .imc-flow-item:nth-of-type(3) .imc-icon-motion{animation-delay:.32s}
+@keyframes imc-icon-reveal{0%{transform:translateY(3px) scale(.86);opacity:.5}65%{transform:translateY(-2px) scale(1.06)}100%{transform:none;opacity:1}}
+.imc-overview-check{margin-top:clamp(21px,4vw,38px);padding:clamp(16px,2.8vw,30px);border-radius:24px;border:1px solid #d8e8e2;background:#edf7f2}
+.imc-overview-check p{max-width:none;margin:0;color:var(--sub)}
+.imc-overview-check .imc-check-lead{color:var(--ink)}
+.imc-check-questions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:11px 0 12px}
+.imc-check-questions p{padding:9px 11px;border-radius:11px;background:#ffffffad;color:var(--ink);font-weight:600;font-size:15px}
+@media(max-width:830px){.imc-overview-grid{grid-template-columns:1fr}.imc-overview-intro h2{max-width:18ch}}
+@media(max-width:600px){.imc-check-questions{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.section-enter .imc-icon-motion{animation:none}}
 </style>
 </head>
 <body id="top">
@@ -257,10 +284,45 @@ nav a:last-child{background:#e2f4e9;color:#205a37}
 </div></figure></div>
 <div class="facts"><div><span class="mono">Thời gian</span><strong>16h00–18h00 · Thứ Bảy, 21.11.2026</strong></div><div><span class="mono">Địa điểm</span><strong>Trực tiếp tại Văn phòng Hà Nội</strong></div><div><span class="mono">Quy mô</span><strong>10–15 người</strong></div></div>
 </div></section>
+<section class="section imc-overview" id="tong-quan-imc" aria-labelledby="imc-overview-title">
+  <div class="wrap">
+    <div class="imc-overview-grid">
+      <div class="imc-overview-intro">
+        <h2 id="imc-overview-title">Một kế hoạch IMC được xây dựng như thế nào?</h2>
+        <p>Lập kế hoạch IMC là chuyển yêu cầu trong brief thành một chiến dịch có mục tiêu rõ ràng, trong đó mỗi kênh và hoạt động đảm nhận một vai trò để cùng tạo ra kết quả.</p>
+        <p>Người lập kế hoạch cần xác định <strong>muốn tạo thay đổi gì, ở nhóm đối tượng nào và các hoạt động sẽ phối hợp ra sao để tạo ra thay đổi đó</strong>.</p>
+      </div>
+      <div class="imc-overview-flow">
+        <p class="imc-flow-lead">Buổi coaching sẽ đi qua sáu bước của <strong>I.M.P.A.C.T Framework</strong>.</p>
+        <article class="imc-flow-item">
+          <div class="imc-flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="3" width="11" height="16" rx="2"/><path d="M7 7h5M7 10h3"/><circle class="imc-icon-motion" cx="15.5" cy="15.5" r="3.5"/><path d="m18 18 3 3"/></svg></div>
+          <div><h3>Làm rõ brief</h3><p>Brief là điểm xuất phát để làm rõ mục tiêu kinh doanh, marketing và truyền thông, xác định đối tượng trọng tâm và thông tin cần kiểm chứng.</p></div>
+        </article>
+        <article class="imc-flow-item">
+          <div class="imc-flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path class="imc-icon-motion" d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg></div>
+          <div><h3>Chọn hướng chiến lược</h3><p>Các phát hiện đó là căn cứ để chọn hướng chiến lược, phát triển ý tưởng và xây dựng kế hoạch triển khai.</p></div>
+        </article>
+        <article class="imc-flow-item">
+          <div class="imc-flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4v16h16M8 16v-3m4 3V9m4 7V6"/><path class="imc-icon-motion" d="m7 10 4-3 3 1 5-4"/></svg></div>
+          <div><h3>Phân bổ và đo lường</h3><p>Vai trò của từng giai đoạn và từng kênh là cơ sở để phân bổ ngân sách và chọn KPI phù hợp.</p></div>
+        </article>
+      </div>
+    </div>
+    <div class="imc-overview-check">
+      <p class="imc-check-lead"><strong>Một kế hoạch IMC cần giải thích rõ vì sao từng đề xuất phù hợp với mục tiêu đã xác định trong brief.</strong></p>
+      <div class="imc-check-questions">
+        <p>Mỗi giai đoạn cần tạo chuyển biến gì ở đối tượng trọng tâm?</p>
+        <p>Các kênh phối hợp ra sao để tạo ra chuyển biến đó?</p>
+        <p>KPI nào cho biết chuyển biến đó đã xảy ra?</p>
+      </div>
+      <p>Mối liên kết giữa mục tiêu, hoạt động và đo lường giúp các phần của kế hoạch vận hành như một chiến dịch tích hợp.</p>
+    </div>
+  </div>
+</section>
 <section class="section" id="gia-tri"><div class="wrap split"><div><p class="eyebrow mono">Giá trị buổi coaching</p><h2>Hiểu để làm việc tốt hơn với brief và proposal</h2><p class="intro">Dành cho các bạn Account và Sales thực sự muốn tìm hiểu framework và áp dụng vào công việc.</p></div><div>
-<article class="benefit"><p class="benefit-context">Khi khách hàng đưa brief</p><h3>Làm rõ bài toán trước khi chốt scope</h3><p>Phân biệt mục tiêu kinh doanh, marketing và truyền thông. Xác định điều gì cần hỏi lại, giả định nào phải kiểm chứng và ngân sách, thời hạn có cho phép xử lý đúng bài toán hay không.</p></article>
+<article class="benefit"><p class="benefit-context">Khi khách hàng đưa brief</p><h3>Làm rõ bài toán trước khi chốt scope</h3><p>Chuẩn bị câu hỏi debrief để xác nhận phạm vi công việc, thông tin khách hàng cần bổ sung và những ràng buộc về ngân sách hoặc thời hạn trước khi chuyển brief cho Planning.</p></article>
 <article class="benefit"><p class="benefit-context">Khi review proposal với Planning</p><h3>Tìm chỗ lập luận bị đứt gãy</h3><p>Lần theo mạch mục tiêu, đối tượng, insight và vai trò của ý tưởng. Chỉ ra điểm chưa khớp, chẳng hạn KPI đo độ phủ trong khi hạng mục đang được giao nhiệm vụ tạo lead.</p></article>
-<article class="benefit"><p class="benefit-context">Khi khách hàng yêu cầu cắt ngân sách</p><h3>Biết nên giữ gì và cắt gì</h3><p>Đọc vai trò của từng hạng mục theo giai đoạn, từ tạo chú ý đến thúc đẩy hành động. Khi cần giảm chi phí, giải thích phần nào có thể thu gọn và mục tiêu hay KPI nào sẽ bị ảnh hưởng.</p></article>
+<article class="benefit"><p class="benefit-context">Khi khách hàng yêu cầu cắt ngân sách</p><h3>Biết nên giữ gì và cắt gì</h3><p>Đề xuất hạng mục cần giữ, có thể thu gọn hoặc lùi sang giai đoạn khác. Làm rõ với khách hàng việc cắt giảm sẽ ảnh hưởng thế nào đến kết quả kỳ vọng.</p></article>
 </div></div></section>
 <section class="section framework" id="framework"><div class="wrap"><div class="head"><p class="eyebrow mono">Nội dung coaching</p><h2>I.M.P.A.C.T Framework</h2><p class="intro">Khung tư duy và quy trình lập kế hoạch IMC qua sáu bước.</p></div>
 <div class="accordion">
@@ -293,7 +355,7 @@ nav a:last-child{background:#e2f4e9;color:#205a37}
 </dl></div>
 <div class="coach-image"><img src="coach-oscar-tran.webp" alt="Chân dung Trần Hùng Cường" width="592" height="1060" loading="lazy"></div>
 </div></section>
-<section class="register" id="dang-ky"><div class="wrap register-layout"><div class="register-info"><h2>Đăng ký tham dự</h2><dl class="facts-list"><div><dt>Thời gian</dt><dd>16h00–18h00, thứ Bảy, 21.11.2026<small>Khung giờ cố định. Vui lòng sắp xếp tham dự trọn buổi.</small></dd></div><div><dt>Địa điểm</dt><dd>Trực tiếp tại Văn phòng Hà Nội<small>Phòng họp sẽ được thông báo sau.</small></dd></div><div><dt>Số lượng</dt><dd>10–15 người, gồm 3 thành viên admeX Team<small>Ưu tiên đăng ký sớm.</small></dd></div></dl></div>
+<section class="register" id="dang-ky"><div class="wrap register-layout"><div class="register-info"><h2>Đăng ký tham dự</h2><dl class="facts-list"><div><dt>Thời gian</dt><dd>16h00–18h00, thứ Bảy, 21.11.2026<small>Khung giờ cố định. Vui lòng sắp xếp tham dự trọn buổi.</small></dd></div><div><dt>Địa điểm</dt><dd>Trực tiếp tại Văn phòng Hà Nội<small>Phòng họp sẽ được thông báo sau.</small></dd></div><div><dt>Số lượng</dt><dd>10–15 người, gồm 3 thành viên admeX<small>Ưu tiên đăng ký sớm.</small></dd></div></dl></div>
 <div class="register-form"><form class="signup" id="coaching-signup" method="post" target="registration-response" data-endpoint="https://script.google.com/macros/s/AKfycbzzl44L5O-bCWiA4WYowlnZMhprVc9gNutDUM4GAOc_CC33e00f2NV2NXvx-sFKv7P14g/exec">
 <label>Họ và Tên<input name="fullName" autocomplete="name" required maxlength="150"></label>
 <label>MNS<input name="employeeId" autocomplete="off" required maxlength="50"></label>
