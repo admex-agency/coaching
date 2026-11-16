@@ -1,12 +1,39 @@
 const SPREADSHEET_ID = '1Kygo7rNEKBqEnPV0c8HFOTKcdGheF9E55etj71bVe6s';
 const SHEET_NAME = 'Sheet1';
 
+function validReceiptNonce(nonce) {
+  return typeof nonce === 'string' &&
+    /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(nonce);
+}
+
+function doGet(e) {
+  const nonce = e && e.parameter && e.parameter.receipt;
+  if (!validReceiptNonce(nonce)) {
+    return ContentService.createTextOutput('Invalid receipt.');
+  }
+  const cached = CacheService.getScriptCache().get('imc:' + nonce);
+  const result = cached ? JSON.parse(cached) : { nonce, state: 'pending' };
+  return ContentService.createTextOutput('admexImcReceipt(' + JSON.stringify(result) + ');')
+    .setMimeType(ContentService.MimeType.JAVASCRIPT);
+}
+
 function doPost(e) {
   const fields = e && e.parameter || {};
   const responseOrigin = typeof fields.responseOrigin === 'string' ? fields.responseOrigin : '';
   const responseNonce = typeof fields.responseNonce === 'string' ? fields.responseNonce : '';
-  const respond = (state, title, message) =>
-    resultPage(state, title, message, responseOrigin, responseNonce);
+  const respond = (state, title, message) => {
+    if (validReceiptNonce(responseNonce)) {
+      try {
+        // Cache only the outcome and opaque receipt. Never cache registration fields.
+        CacheService.getScriptCache().put('imc:' + responseNonce, JSON.stringify({
+          type: 'admex-imc-registration', nonce: responseNonce, state, title, message,
+        }), 300);
+      } catch {
+        // The original iframe callback remains available if the cache cannot write.
+      }
+    }
+    return resultPage(state, title, message, responseOrigin, responseNonce);
+  };
   const readText = key => typeof fields[key] === 'string' ? fields[key].trim() : '';
   const fullName = readText('fullName');
   const employeeId = readText('employeeId');
@@ -41,7 +68,7 @@ function doPost(e) {
     SpreadsheetApp.flush();
     return respond('success', 'Đã ghi nhận đăng ký', 'Ban tổ chức sẽ xác nhận suất tham dự riêng. Cảm ơn anh/chị đã đăng ký.');
   } catch {
-    return respond('warning', 'Chưa xác nhận được đăng ký', 'Vui lòng thử lại hoặc phản hồi email mời để liên hệ ban tổ chức.');
+    return respond('warning', 'Chưa xác nhận được đăng ký', 'Vui lòng phản hồi email mời để ban tổ chức kiểm tra trạng thái đăng ký.');
   } finally {
     lock.releaseLock();
   }
