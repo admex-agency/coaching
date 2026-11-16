@@ -1,1 +1,424 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Coaching IMC Planning Framework dành cho Account và Sales. 16h00–18h00, thứ Bảy 21.11.2026 tại Văn phòng Hà Nội.">
+<meta name="theme-color" content="#f4f8ff">
+<title>IMC Planning Framework | Coaching admeX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#10254b;--sub:#415575;--blue:#134bd6;--line:#bcd2f322;--paper:#f5f9ff;--glass:#ffffffa8;--shadow:0 22px 55px -32px #234f9b6e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 "Google Sans Flex",system-ui,sans-serif}
+a{color:inherit}
+button{font:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible,textarea:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+h1,h2,h3,p{margin:0}
+p{max-width:62ch}
+.wrap{width:min(1160px,calc(100% - 88px));margin:auto}
+.mono{font-size:12px;line-height:1.45;letter-spacing:.09em;text-transform:uppercase;font-weight:700}
+header{position:absolute;inset:0 0 auto;z-index:1;padding-top:16px}
+header .wrap{min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 12px 8px 22px;border-radius:36px}
+header .wrap,.board,.facts,.benefit,details,.register .wrap{background:var(--glass);border:1px solid #ffffffdb;box-shadow:inset 0 1px 0 #fff, var(--shadow);backdrop-filter:blur(18px)}
+.brand{font-size:26px;font-weight:800;letter-spacing:-.085em;text-decoration:none}
+.brand span{color:var(--blue)}
+nav{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:600}
+nav a{text-decoration:none}
+nav a:hover{color:var(--blue)}
+nav a:last-child{padding:8px 15px;border-radius:24px;background:#e4edff;color:var(--blue)}
+.hero{padding:146px 0 40px;background:radial-gradient(ellipse at 83% 39%,#b8d2ff 0,transparent 44%),radial-gradient(ellipse at 27% 0,#dbe9ff 0,transparent 45%),linear-gradient(170deg,#f7faff,#e9f2ff 78%,#f5f9ff)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(0,1fr);gap:50px;align-items:center}
+.hero .mono,.eyebrow{color:#2354a7}
+h1{font-size:clamp(50px,7.1vw,105px);font-weight:650;line-height:.97;letter-spacing:-.072em;margin:15px 0 20px}
+h1 span{color:var(--blue);display:block}
+.hero p{color:var(--sub);max-width:46ch}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:12px;border:1px solid #1a50d4;border-radius:100px;padding:10px 20px;min-height:47px;background:linear-gradient(155deg,#3367ed,#1044c6);color:#fff;box-shadow:inset 0 1px 0 #ffffff65,0 10px 20px -12px #174bc8;text-decoration:none;font-size:15px;font-weight:650;cursor:pointer}
+.button[hidden]{display:none}
+.button:hover{background:#123eb5}
+.button svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8}
+.hero .button{margin-top:25px}
+.board{position:relative;margin:0;border-radius:36px;padding:23px;background:linear-gradient(140deg,#ffffffbf,#e7f2ff7d);box-shadow:inset 0 2px 6px #fff,0 32px 67px -35px #1e5dc08a}
+.board figcaption{display:flex;justify-content:space-between;gap:8px;color:#31538c;margin-bottom:13px}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.tiles a{background:linear-gradient(145deg,#ffffffe0,#f4f9ff61);border:1px solid #fff9;border-radius:19px;min-height:100px;padding:7px 10px 9px 13px;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;color:#204782;box-shadow:0 8px 18px -16px #193e85;transition:transform .18s,background .18s}
+.tiles a:hover,.tiles a:focus-visible{background:#fff;transform:translateY(-2px)}
+.tiles b{font-size:46px;line-height:1;letter-spacing:-.06em;color:var(--blue);font-weight:650}
+.tiles a span{font-size:12px;font-weight:600}
+.facts{display:grid;grid-template-columns:1.25fr 1fr .65fr;margin-top:43px;padding:16px 21px;border-radius:25px;gap:15px}
+.facts div+div{padding-left:15px;border-left:1px solid #b7cce9}
+.facts span{display:block;margin-bottom:3px}
+.facts strong{font-size:16px;font-weight:650}
+.section{padding:69px 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:45px}
+.eyebrow{margin-bottom:9px}
+h2{font-size:clamp(34px,4.3vw,59px);line-height:1.04;letter-spacing:-.052em;font-weight:650}
+h3{font-size:22px;line-height:1.2;letter-spacing:-.022em;font-weight:650}
+.intro{margin-top:12px;color:var(--sub)}
+#gia-tri .split{display:block}
+#gia-tri .split>div:first-child{max-width:700px}
+#gia-tri .split>div:last-child{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:25px}
+.benefit{border-radius:27px;padding:22px;background:linear-gradient(145deg,#fff,#eaf3ff)}
+.benefit p,details p{color:var(--sub);margin-top:8px}
+.framework{background:radial-gradient(ellipse at 12% 40%,#dfeaff,transparent 55%),#eef5ff}
+.framework .wrap{display:grid;grid-template-columns:minmax(0,.77fr) minmax(0,1.23fr);gap:30px;align-items:start}
+.accordion{display:grid;gap:7px}
+details{border-radius:20px;scroll-margin-top:18px}
+summary{display:grid;grid-template-columns:35px minmax(67px,.43fr) 1fr 18px;gap:9px;align-items:center;cursor:pointer;list-style:none;min-height:57px;padding:8px 13px}
+summary::-webkit-details-marker{display:none}
+summary b{color:var(--blue);font-size:29px;line-height:1;letter-spacing:-.06em}
+summary strong{font-size:16px}
+summary span:not(.plus){color:var(--sub);font-size:15px}
+.plus::before{content:"+";font-size:21px;color:var(--blue)}
+details[open] .plus::before{content:"−"}
+details p{padding:0 19px 14px 57px;margin-top:0;font-size:16px}
+.register{padding:56px 0;background:radial-gradient(ellipse at 78% 44%,#cfdeff,transparent 64%)}
+.register .wrap{padding:clamp(22px,4vw,49px);border-radius:36px}
+.register p{margin-top:12px;color:var(--sub)}
+.register .button{margin-top:18px}
+.facts-list{margin:0}
+.facts-list div{display:grid;grid-template-columns:76px 1fr;gap:9px;border-top:1px solid #b9cbe7;padding:9px 0}
+.facts-list dt{font-weight:650}
+.facts-list dd{margin:0}
+.facts-list small{display:block;color:var(--sub);font-size:14px}
+.foot{padding:20px 0;color:var(--sub)}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.foot a{color:var(--blue)}
+dialog{max-width:min(510px,calc(100% - 28px));width:100%;padding:25px;border-radius:27px;color:var(--ink);background:#f7fbff}
+dialog::backdrop{background:#172e6299;backdrop-filter:blur(4px)}
+@media(max-width:830px){
+.wrap{width:calc(100% - 38px)}
+.hero-grid,.split,.framework .wrap{grid-template-columns:1fr;gap:25px}
+.hero{padding:108px 0 33px}
+.hero h1{font-size:clamp(49px,10vw,79px)}
+.facts{margin-top:23px}
+.section,.register{padding:48px 0}
+.board{max-width:530px}
+#gia-tri .split>div:last-child{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+header .wrap{min-height:52px;padding:6px 8px 6px 15px}
+nav{gap:12px;font-size:13px}
+nav a:first-child{display:none}
+.hero h1{font-size:clamp(43px,11vw,56px)}
+.facts{grid-template-columns:1fr 1fr;gap:10px;padding:13px}
+.facts div:first-child{grid-column:1/-1}
+.facts div:nth-child(2){padding-left:0;border-left:0}
+.facts strong{font-size:14px}
+.tiles a{min-height:75px;border-radius:15px;padding-left:8px}
+.tiles b{font-size:36px}
+.board{padding:13px;border-radius:23px}
+.board figcaption{font-size:10px}
+summary{grid-template-columns:24px 62px 1fr 15px;gap:7px;padding-inline:9px}
+summary strong,summary span:not(.plus){font-size:14px}
+details p{padding-left:40px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tiles a{transition:none}}
+
+
+/* The logo carries the brightest green. Blue stays in the glass and text. */
+:root{--ink:#152f41;--sub:#435968;--blue:#245674;--green:#33ce4b;--paper:#f6fafb;--shadow:0 24px 55px -35px #244a6d74}
+.brand{display:inline-flex;align-items:center;flex-shrink:0}
+.brand img{display:block;width:61px;height:auto}
+header .wrap{background:#ffffffb8}
+nav a:last-child{background:#e2f4e9;color:#205a37}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(165deg,#f8fbfd 8%,#e8f3fa 65%,#f6fafb)}
+.hero::before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:radial-gradient(ellipse at 76% 49%,#a7e9c68c,transparent 47%),radial-gradient(ellipse at 37% 44%,#acd6edbd,transparent 55%);}
+.hero .mono,.eyebrow,.board figcaption{color:#2c5a6f}
+.board{background:linear-gradient(135deg,#ffffffc4,#f0fbfc75);box-shadow:inset 0 2px 5px #fff,0 32px 67px -35px #2a6d7780;}
+
+.tiles a{color:#2e5669;transition:transform .22s,background .22s,box-shadow .22s}
+.tiles a:hover,.tiles a:focus-visible{background:#f5fff9;box-shadow:inset 0 1px #fff,0 11px 22px -14px #2a8c56a0;transform:translateY(-4px)}
+.benefit{background:linear-gradient(145deg,#fff,#edf6fa);transition:transform .22s}
+@media(hover:hover){.benefit:hover{transform:translateY(-3px)}}
+.framework{background:radial-gradient(ellipse at 12% 40%,#e0f1f5,transparent 55%),#eef6f9}
+.register{background:radial-gradient(ellipse at 82% 35%,#d8f4e4,transparent 67%)}
+.register .wrap{align-items:start;grid-template-columns:minmax(0,.83fr) minmax(0,1.17fr)}
+.register .facts-list{margin-top:21px}
+.button{border-color:#8be5a0;background:linear-gradient(145deg,#a8f3b6,#6ee687);color:#113e26;box-shadow:inset 0 1px 0 #ffffffa6,0 12px 20px -15px #29834b}
+.button:hover{background:#92efa4}
+.button:disabled{background:#e3ebe8;border-color:#d6e3de;color:#475b54;box-shadow:none;cursor:default}
+.signup{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.signup label{display:flex;flex-direction:column;gap:5px;font-weight:650;font-size:15px}
+.signup label small{color:var(--sub);font-weight:400;font-size:inherit}
+.signup input,.signup textarea{width:100%;min-width:0;min-height:44px;background:#ffffffdb;border:1px solid #a9c2cd;border-radius:13px;padding:9px 11px;color:var(--ink);font:400 16px/1.4 "Google Sans Flex",system-ui,sans-serif}
+.signup textarea{resize:vertical}
+.signup input:focus,.signup textarea:focus{outline:2px solid #3d9464;outline-offset:1px}
+.signup .wide{grid-column:1/-1}
+.signup .button{margin-top:0}
+
+@keyframes glass-enter{from{opacity:.45;transform:translateY(11px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:830px){.register .wrap{grid-template-columns:1fr}}
+@media(max-width:480px){.signup{grid-template-columns:1fr}.brand img{width:50px}}
+@media(prefers-reduced-motion:reduce){.tiles a,.benefit{transition:none}}
+
+.section-enter .wrap{animation:glass-enter .55s ease-out both}
+.foot{border-top:1px solid #bcd0d986;padding:24px 0 34px}
+.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:12px 24px}
+.foot small{grid-column:1/-1}
+.back-top{position:fixed;z-index:2;right:18px;bottom:18px;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:#f6fffb;border:1px solid #b5d6c3;box-shadow:var(--shadow);color:#205a37}
+.back-top svg{width:19px;fill:none;stroke:currentColor;stroke-width:1.8}
+.policy-link{display:block;border:0;background:none;text-decoration:underline;color:var(--blue);cursor:pointer;padding:8px 0}
+#data-policy{max-width:min(680px,calc(100% - 28px));max-height:85dvh;overflow:auto;padding:0;border:1px solid #b9d5de}
+.policy-head{position:sticky;top:0;background:#f7fbff;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 21px;border-bottom:1px solid #d6e4ee}
+.policy-head h2{font-size:clamp(25px,5vw,34px)}
+.policy-head button{width:44px;height:44px;border:1px solid #b7d1dc;background:white;color:var(--ink);border-radius:50%;cursor:pointer;font-size:24px}
+.policy-body{padding:18px 21px 24px}
+.policy-body h3{margin-top:16px;font-size:19px}
+.policy-body p{color:var(--sub);margin-top:4px}
+@media(max-width:550px){.foot .wrap{grid-template-columns:1fr;padding-right:39px}}
+@media(prefers-reduced-motion:reduce){.section-enter .wrap{animation:none}}
+
+.map-section{background:radial-gradient(ellipse at 70% 20%,#e0f4ee,transparent 65%),#f5fafc}
+.framework-map{margin:22px 0 0;padding:clamp(15px,3.4vw,40px);border-radius:32px;border:1px solid white;background:#ffffff9e;box-shadow:var(--shadow)}
+.map-root{width:fit-content;margin:0 auto 22px;padding:9px 20px;border-radius:24px;background:#dbefe9;text-align:center;position:relative}
+.map-root span{display:block;font-size:12px;color:var(--sub);letter-spacing:.12em;font-weight:700}
+.map-root::after{content:"";position:absolute;left:50%;bottom:-22px;height:22px;border-left:1px solid #80a99d}
+.map-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;border-top:1px solid #80a99d;padding-top:11px}
+.map-step{background:#eef5f7;border:1px solid #e0eaef;border-radius:19px;padding:13px;min-height:105px}
+.map-step>div{display:flex;align-items:center;gap:8px}
+.map-step b{color:var(--blue);font-size:26px}
+.map-step h3{font-size:18px}
+.map-step i{display:block;margin-top:8px;width:75%;height:27px;filter:blur(2.5px);background:repeating-linear-gradient(to bottom,#a4bdc7 0 4px,transparent 4px 11px);opacity:.52}
+.map-input{grid-column:span 2;background:#ebfaf0;border-color:#acdbbc}
+.map-input ol{margin:4px 0 0;padding-left:22px;color:var(--sub);font-size:15px}
+.framework-map figcaption{font-size:14px;color:var(--sub);margin-top:14px}
+@media(max-width:560px){.map-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.map-step h3{font-size:16px}}
+
+.benefit{display:flex;flex-direction:column;min-width:0;padding:22px}
+.benefit .benefit-context{font-size:13px;color:#245674;font-weight:700;margin:0 0 9px}
+.benefit h3{font-size:24px}
+.benefit h3+p{margin-bottom:14px}
+.map-open{background:#ebfaf0;border-color:#acdbbc}
+.map-open ol{margin:4px 0 0;padding-left:22px;color:var(--sub);font-size:15px}
+@media(max-width:560px){.map-open{grid-column:span 2}}
+.signup-feedback:empty{display:none}
+.signup-feedback{padding:13px 15px;margin-top:6px;border:1px solid #bfdbd6;background:#eef8f8;border-radius:15px;color:#264c53}
+.signup-feedback strong,.signup-feedback span{display:block}
+.signup-feedback span{font-size:15px;margin-top:3px}
+.signup-feedback[data-state="success"]{border-color:#a3d9b5;background:#e9faf0;color:#165136}
+.signup-feedback[data-state="warning"],.signup-feedback[data-state="duplicate"]{border-color:#ead3a1;background:#fff8e8;color:#62440c}
+
+.benefit h3+p{margin-bottom:0}
+.coach{background:#f3f8fa}
+.coach-layout{display:grid;grid-template-columns:minmax(160px,280px) minmax(0,590px);align-items:center;gap:clamp(22px,6vw,82px)}
+.coach-image{background:#dcebf0;border-radius:28px;overflow:hidden;aspect-ratio:4/4.6;box-shadow:var(--shadow)}
+.coach-image img{width:100%;height:100%;object-fit:cover;object-position:center 38%;display:block}
+.coach-role{font-weight:650;color:var(--blue);margin-top:14px}
+.register .register-layout{background:none;box-shadow:none;border:none;padding:0;backdrop-filter:none;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(18px,4vw,48px);align-items:start}
+.register-info,.register-form{background:var(--glass);border:1px solid #fff;border-radius:28px;padding:clamp(18px,3.4vw,36px);box-shadow:var(--shadow)}
+.register-info h2{font-size:clamp(31px,3.5vw,47px)}
+.signup-actions{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.signup-actions .policy-link{font-size:13px;text-align:right;margin-left:auto}
+.signup-feedback:not(:empty){margin-top:13px}
+@supports selector(::details-content){
+  .accordion details{interpolate-size:allow-keywords}
+  .accordion details::details-content{block-size:0;overflow:clip;opacity:0;transition:block-size .32s ease,opacity .24s ease,content-visibility .32s allow-discrete}
+  .accordion details[open]::details-content{block-size:auto;opacity:1}
+}
+@media(max-width:830px){.register .register-layout{grid-template-columns:1fr}}
+@media(max-width:540px){.coach-layout{grid-template-columns:1fr}.coach-image{max-width:270px}.signup-actions .button{padding-inline:13px}}
+@media(prefers-reduced-motion:reduce){.accordion details::details-content{transition:none}}
+
+.coach-layout{grid-template-columns:minmax(0,1.27fr) minmax(235px,.73fr);gap:0;overflow:hidden;border-radius:34px;background:linear-gradient(145deg,#fcffff,#e1eff1 74%);border:1px solid #fff;box-shadow:var(--shadow)}
+.coach-copy{padding:clamp(28px,4.5vw,58px)}
+.coach-copy h2{margin-top:12px}
+.coach-role{margin-top:16px;font-size:clamp(17px,2vw,22px)}
+.coach-agency{color:var(--sub);margin:3px 0 20px}
+.coach-image{aspect-ratio:auto;border-radius:0;box-shadow:none;align-self:stretch;position:relative;min-height:370px;background:radial-gradient(ellipse at 52% 46%,#d8f1e8 0%,#d4e8ee 56%,#cadddf 100%)}
+.coach-image img{position:absolute;width:100%;height:94%;bottom:0;left:0;object-fit:contain;object-position:center bottom}
+.coach-highlights{margin:20px 0 0;max-width:57ch}
+.coach-highlights div{border-top:1px solid #c5d8da;padding:9px 0}
+.coach-highlights dt{font-weight:700;color:var(--ink)}
+.coach-highlights dd{margin:1px 0 0;color:var(--sub);font-size:15px}
+.register .register-layout{grid-template-columns:minmax(0,.87fr) minmax(0,1.13fr);align-items:stretch}
+.register-info{display:flex;flex-direction:column;background:linear-gradient(155deg,#eaf7f2,#fafdfe)}
+.register-info .facts-list{display:grid;flex:1;align-content:stretch;margin-top:19px}
+.register-info .facts-list div{align-content:center;min-height:64px}
+.footer-meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:3px 14px}
+.footer-meta small{white-space:normal}
+.foot>.wrap{align-items:end}
+.foot strong{display:block;margin-top:4px}
+@media(max-width:830px){.register .register-layout{grid-template-columns:1fr}.register-info .facts-list div{min-height:0}.coach-layout{width:calc(100% - 38px)}.foot>.wrap{grid-template-columns:1fr}}
+@media(max-width:540px){.coach-layout{grid-template-columns:1fr}.coach-copy{padding:26px}.coach-image{max-width:none;min-height:310px;border-top:1px solid #ffffffbe}}
+</style>
+</head>
+<body id="top">
+<header class="dark"><div class="wrap"><a class="brand" href="#top" aria-label="admeX, đầu trang"><img src="admex-logo.png" alt="admeX"></a><nav aria-label="Điều hướng"><a href="#gia-tri">Giá trị buổi coaching</a><a href="#framework">Framework</a><a href="#dang-ky">Đăng ký</a></nav></div></header>
+<main>
+<section class="dark hero"><div class="wrap">
+<div class="hero-grid"><div><div class="mono">Coaching dành cho Account &amp; Sales</div><h1>IMC Planning <span>Framework</span></h1><p>Hiểu cách một kế hoạch IMC được xây dựng, từ câu hỏi đầu tiên khi nhận brief đến cách đo lường hiệu quả chiến dịch.</p><a class="button" href="#dang-ky">Đăng ký tham dự <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+<figure class="board"><figcaption class="mono"><span>I.M.P.A.C.T Framework</span><span>6 bước</span></figcaption><div class="tiles">
+<a href="#input"><b>I</b><span>Input</span></a><a href="#mapping"><b>M</b><span>Mapping</span></a><a href="#path"><b>P</b><span>Path</span></a><a href="#action"><b>A</b><span>Action</span></a><a href="#costing"><b>C</b><span>Costing</span></a><a href="#tracking"><b>T</b><span>Tracking</span></a>
+</div></figure></div>
+<div class="facts"><div><span class="mono">Thời gian</span><strong>16h00–18h00 · Thứ Bảy, 21.11.2026</strong></div><div><span class="mono">Địa điểm</span><strong>Trực tiếp tại Văn phòng Hà Nội</strong></div><div><span class="mono">Quy mô</span><strong>10–15 người</strong></div></div>
+</div></section>
+<section class="section" id="gia-tri"><div class="wrap split"><div><p class="eyebrow mono">Giá trị buổi coaching</p><h2>Hiểu để làm việc tốt hơn với brief và proposal</h2><p class="intro">Dành cho các bạn Account và Sales thực sự muốn tìm hiểu framework và áp dụng vào công việc.</p></div><div>
+<article class="benefit"><p class="benefit-context">Khi khách hàng đưa brief</p><h3>Làm rõ bài toán trước khi chốt scope</h3><p>Phân biệt mục tiêu kinh doanh, marketing và truyền thông. Xác định điều gì cần hỏi lại, giả định nào phải kiểm chứng và ngân sách, thời hạn có cho phép xử lý đúng bài toán hay không.</p></article>
+<article class="benefit"><p class="benefit-context">Khi review proposal với Planning</p><h3>Tìm chỗ lập luận bị đứt gãy</h3><p>Lần theo mạch mục tiêu, đối tượng, insight và vai trò của ý tưởng. Chỉ ra điểm chưa khớp, chẳng hạn KPI đo độ phủ trong khi hạng mục đang được giao nhiệm vụ tạo lead.</p></article>
+<article class="benefit"><p class="benefit-context">Khi khách hàng yêu cầu cắt ngân sách</p><h3>Biết nên giữ gì và cắt gì</h3><p>Đọc vai trò của từng hạng mục theo giai đoạn, từ tạo chú ý đến thúc đẩy hành động. Khi cần giảm chi phí, giải thích phần nào có thể thu gọn và mục tiêu hay KPI nào sẽ bị ảnh hưởng.</p></article>
+</div></div></section>
+<section class="section framework" id="framework"><div class="wrap"><div class="head"><p class="eyebrow mono">Nội dung coaching</p><h2>I.M.P.A.C.T Framework</h2><p class="intro">Khung tư duy và quy trình lập kế hoạch IMC qua sáu bước.</p></div>
+<div class="accordion">
+<details name="coaching-framework" id="input" open><summary><b>I</b><strong>Input</strong><span>Nhận và làm rõ brief</span><span class="plus" aria-hidden="true"></span></summary><p>Rà soát yêu cầu, ngân sách và deadline. Chuẩn bị câu hỏi debrief để xác nhận bài toán và mục tiêu với khách hàng.</p></details>
+<details name="coaching-framework" id="mapping"><summary><b>M</b><strong>Mapping</strong><span>Xác định mục tiêu và đối tượng</span><span class="plus" aria-hidden="true"></span></summary><p>Phân biệt mục tiêu kinh doanh, marketing và truyền thông. Xác định đối tượng và dữ liệu cần tìm hiểu về thị trường, đối thủ.</p></details>
+<details name="coaching-framework" id="path"><summary><b>P</b><strong>Path</strong><span>Phát triển insight và ý tưởng</span><span class="plus" aria-hidden="true"></span></summary><p>Kết nối insight với nhiệm vụ truyền thông để xây dựng Big Idea, thông điệp và hướng sáng tạo.</p></details>
+<details name="coaching-framework" id="action"><summary><b>A</b><strong>Action</strong><span>Lập kế hoạch triển khai</span><span class="plus" aria-hidden="true"></span></summary><p>Xác định vai trò của từng giai đoạn, chiến thuật, nền tảng và kênh trong lộ trình triển khai.</p></details>
+<details name="coaching-framework" id="costing"><summary><b>C</b><strong>Costing</strong><span>Phân bổ ngân sách</span><span class="plus" aria-hidden="true"></span></summary><p>Hiểu cách phân bổ theo ngân sách tổng hoặc dự toán từ từng hạng mục.</p></details>
+<details name="coaching-framework" id="tracking"><summary><b>T</b><strong>Tracking</strong><span>Xác định KPI và cách đo lường</span><span class="plus" aria-hidden="true"></span></summary><p>Gắn KPI với mục tiêu chiến dịch và vai trò của từng kênh, từ Digital, Social đến PR.</p></details>
+</div></div></section>
+<section class="section map-section" id="framework-map"><div class="wrap">
+<div class="map-heading"><p class="eyebrow mono">Trích từ tài liệu coaching</p><h2>Sơ đồ I.M.P.A.C.T Framework</h2></div>
+<figure class="framework-map" aria-label="Sơ đồ sáu bước I.M.P.A.C.T. Nội dung chi tiết của hai bước Input và Mapping được hiển thị.">
+<div class="map-root"><strong>IMC Planning Framework</strong><span>I.M.P.A.C.T</span></div>
+<div class="map-grid">
+<article class="map-step map-input"><div><b>I</b><h3>Input</h3></div><ol><li>Nhận và rà soát brief</li><li>Đánh giá ngân sách, deadline và tính khả thi</li><li>Debrief để xác nhận bài toán và mục tiêu</li></ol></article>
+<article class="map-step map-open"><div><b>M</b><h3>Mapping</h3></div><ol><li>Phân biệt mục tiêu kinh doanh, marketing và truyền thông</li><li>Xác định đối tượng trọng tâm</li><li>Rà soát dữ liệu thị trường và đối thủ cần kiểm chứng</li></ol></article>
+<article class="map-step"><div><b>P</b><h3>Path</h3></div><i aria-hidden="true"></i></article>
+<article class="map-step"><div><b>A</b><h3>Action</h3></div><i aria-hidden="true"></i></article>
+<article class="map-step"><div><b>C</b><h3>Costing</h3></div><i aria-hidden="true"></i></article>
+<article class="map-step"><div><b>T</b><h3>Tracking</h3></div><i aria-hidden="true"></i></article>
+</div><figcaption>Chi tiết các bước còn lại được trình bày trong buổi coaching.</figcaption>
+</figure></div></section>
+<section class="section coach" aria-labelledby="coach-name"><div class="wrap coach-layout">
+<div class="coach-copy"><p class="eyebrow mono">Coach</p><h2 id="coach-name">Trần Hùng Cường</h2><p class="coach-role">Giám đốc Tư vấn Chiến lược</p><p class="coach-agency">admeX Creative Media Agency · VCCorp</p>
+<dl class="coach-highlights">
+<div><dt>18 năm kinh nghiệm</dt><dd>Tư vấn chiến lược, hoạch định IMC, Digital, Media, PR, Social và Event.</dd></div>
+<div><dt>Dẫn dắt tư vấn tại VCCorp</dt><dd>Phụ trách hoạt động tư vấn và hoạch định chiến lược tại MagnetoIMC và admeX.</dd></div>
+<div><dt>Huấn luyện đội ngũ agency</dt><dd>Triển khai Admicro Pitching GrowthLedge, chương trình phát triển năng lực pitching nội bộ.</dd></div>
+</dl></div>
+<div class="coach-image"><img src="coach-oscar-tran.webp" alt="Chân dung Trần Hùng Cường" width="592" height="1060" loading="lazy"></div>
+</div></section>
+<section class="register" id="dang-ky"><div class="wrap register-layout"><div class="register-info"><h2>Đăng ký tham dự</h2><dl class="facts-list"><div><dt>Thời gian</dt><dd>16h00–18h00, thứ Bảy, 21.11.2026<small>Khung giờ cố định. Vui lòng sắp xếp tham dự trọn buổi.</small></dd></div><div><dt>Địa điểm</dt><dd>Trực tiếp tại Văn phòng Hà Nội<small>Phòng họp sẽ được thông báo sau.</small></dd></div><div><dt>Số lượng</dt><dd>10–15 người, gồm 3 thành viên admeX Team<small>Ưu tiên đăng ký sớm.</small></dd></div></dl></div>
+<div class="register-form"><form class="signup" id="coaching-signup" method="post" target="registration-response" data-endpoint="https://script.google.com/macros/s/AKfycbzzl44L5O-bCWiA4WYowlnZMhprVc9gNutDUM4GAOc_CC33e00f2NV2NXvx-sFKv7P14g/exec">
+<label>Họ và Tên<input name="fullName" autocomplete="name" required maxlength="150"></label>
+<label>MNS<input name="employeeId" autocomplete="off" required maxlength="50"></label>
+<label>Bộ phận<input name="department" required maxlength="150"></label>
+<label>Vị trí<input name="jobTitle" autocomplete="organization-title" required maxlength="150"></label>
+<label class="wide">Số năm làm việc tại ADMICRO<input name="yearsAtAdmicro" type="number" min="0" step="any" inputmode="decimal" required></label>
+<label class="wide"><span class="question-label">Câu hỏi <small>(nếu có)</small></span><textarea name="question" rows="3" maxlength="1200"></textarea></label>
+<div class="wide"><div class="signup-actions"><button class="button" type="submit" disabled>Gửi đăng ký</button><button class="policy-link" type="button" id="open-policy">Chính sách Dữ liệu</button></div><div id="signup-feedback" class="signup-feedback" role="status" aria-live="polite"></div></div>
+</form></div>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap"><div><p>Hoạt động Coaching nội bộ và chỉ dành cho nhân sự ADMICRO.</p><strong>admeX Creative Media Agency</strong></div><div class="footer-meta"><a href="https://admex.vn/">admex.vn</a><small>© 2020-2026 <a href="https://admex.vn/">ConteXtive</a>. All rights reserved</small></div></div></footer>
+<a class="back-top" href="#top" aria-label="Về đầu trang" title="Về đầu trang"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg></a>
+<dialog id="data-policy" aria-labelledby="policy-title">
+<div class="policy-head"><h2 id="policy-title">Chính sách Dữ liệu</h2><form method="dialog"><button type="submit" aria-label="Đóng">×</button></form></div>
+<div class="policy-body">
+<p>Chính sách này áp dụng cho form đăng ký buổi coaching IMC Planning Framework dành cho nhân sự ADMICRO do admeX Creative Media Agency tổ chức.</p>
+<h3>Dữ liệu được thu thập</h3><p>Form yêu cầu họ và tên, mã nhân sự (MNS), bộ phận, vị trí và số năm làm việc tại ADMICRO. Anh/chị có thể gửi thêm câu hỏi để người phụ trách chuẩn bị nội dung. Câu hỏi là tùy chọn. Vui lòng tránh nhập thông tin khách hàng, tài liệu mật hoặc dữ liệu cá nhân của người khác vào trường này.</p>
+<h3>Mục đích sử dụng</h3><p>Ban tổ chức dùng thông tin để đối chiếu điều kiện tham dự nội bộ, quản lý danh sách đăng ký, xác nhận suất tham dự, thông báo thông tin tổ chức và chuẩn bị nội dung phù hợp với các câu hỏi nhận được.</p>
+<h3>Phạm vi sử dụng</h3><p>Thông tin đăng ký phục vụ riêng cho việc tổ chức buổi coaching. Ban tổ chức không dùng MNS, thông tin công việc hoặc câu hỏi của người tham dự để đánh giá hiệu suất hay làm căn cứ cho quyết định nhân sự.</p>
+<h3>Trao đổi câu hỏi trong buổi coaching</h3><p>Ban tổ chức có thể tổng hợp các câu hỏi theo chủ đề để thảo luận. Khi đưa câu hỏi vào nội dung chung, ban tổ chức sẽ bỏ họ tên, MNS và các chi tiết có thể nhận diện người gửi.</p>
+<h3>Thời gian lưu và yêu cầu xử lý dữ liệu</h3><p>Dữ liệu được sử dụng trong thời gian cần thiết để tổ chức và xử lý các công việc liên quan sau buổi coaching. Anh/chị có thể phản hồi email mời để hỏi về dữ liệu đã gửi, yêu cầu cập nhật thông tin, rút đăng ký hoặc đề nghị xóa dữ liệu. Vui lòng cung cấp đủ thông tin để ban tổ chức xác định đúng lượt đăng ký, đồng thời tránh gửi thêm thông tin ngoài phạm vi cần đối chiếu.</p>
+<h3>Trước khi gửi</h3><p>Vui lòng kiểm tra thông tin đã nhập. Việc gửi form ghi nhận nhu cầu tham dự. Suất tham dự sẽ được xác nhận riêng theo số lượng và thứ tự đăng ký.</p>
+</div></dialog>
+<script>
+const signup = document.querySelector('#coaching-signup');
+const feedback = document.querySelector('#signup-feedback');
+const submitButton = signup.querySelector('[type="submit"]');
+let pending = null;
+
+function showFeedback(state, title, message) {
+  feedback.dataset.state = state;
+  const heading = document.createElement('strong');
+  heading.textContent = title;
+  const body = document.createElement('span');
+  body.textContent = message;
+  feedback.replaceChildren(heading, body);
+}
+
+function finishRequest() {
+  clearTimeout(pending.timer);
+  pending.inputs.forEach(input => input.remove());
+  pending.frame.remove();
+  pending = null;
+  signup.removeAttribute('action');
+  submitButton.disabled = false;
+}
+
+signup.addEventListener('submit', event => {
+  event.preventDefault();
+  if (pending) return;
+  if (location.protocol !== 'https:' || !globalThis.crypto?.getRandomValues) {
+    showFeedback('warning', 'Chưa thể gửi đăng ký', 'Vui lòng mở trang đã xuất bản qua HTTPS để gửi form.');
+    return;
+  }
+  const bytes = crypto.getRandomValues(new Uint8Array(16));
+  const hex = Array.from(bytes, byte => byte.toString(16).padStart(2, '0')).join('');
+  const nonce = [hex.slice(0, 8), hex.slice(8, 12), hex.slice(12, 16), hex.slice(16, 20), hex.slice(20)].join('-');
+  const frame = document.createElement('iframe');
+  frame.name = signup.target;
+  frame.hidden = true;
+  frame.title = 'Phản hồi đăng ký';
+  const inputs = Object.entries({ responseOrigin: location.origin, responseNonce: nonce }).map(([key, value]) => {
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = key;
+    input.value = value;
+    signup.append(input);
+    return input;
+  });
+  document.body.append(frame);
+  signup.action = signup.dataset.endpoint;
+  pending = { nonce, frame, inputs, timer: setTimeout(() => {
+    finishRequest();
+    showFeedback('warning', 'Chưa nhận được xác nhận', 'Đăng ký có thể đã được ghi nhận. Anh/chị có thể thử lại với cùng mã nhân sự.');
+  }, 35000) };
+  submitButton.disabled = true;
+  showFeedback('pending', 'Đang gửi đăng ký', 'Vui lòng chờ xác nhận.');
+  try {
+    HTMLFormElement.prototype.submit.call(signup);
+  } catch {
+    finishRequest();
+    showFeedback('warning', 'Chưa thể gửi đăng ký', 'Vui lòng tải lại trang và thử lại.');
+  }
+});
+submitButton.disabled = false;
+
+window.addEventListener('message', event => {
+  if (!pending || !/^https:\/\/(?:script\.google\.com|(?:[a-z0-9-]+\.)?googleusercontent\.com)$/i.test(event.origin)) return;
+  const { type, nonce, state, title, message } = event.data ?? {};
+  if (type !== 'admex-imc-registration' || nonce !== pending.nonce ||
+      !['success', 'duplicate', 'warning'].includes(state) ||
+      typeof title !== 'string' || typeof message !== 'string') return;
+
+  finishRequest();
+  if (state === 'success') signup.reset();
+  showFeedback(state, title, message);
+});
+const policy = document.querySelector('#data-policy');
+document.querySelector('#open-policy').addEventListener('click', () => policy.showModal());
+function revealStep() {
+  const step = document.getElementById(location.hash.slice(1));
+  if (step?.matches('details')) step.open = true;
+}
+addEventListener('hashchange', revealStep);
+document.querySelectorAll('.tiles a').forEach(link => {
+  link.addEventListener('click', () => {
+    const step = document.querySelector(link.hash);
+    if (step?.matches('details')) step.open = true;
+  });
+});
+revealStep();
+const sections = document.querySelectorAll('main section:not(.hero)');
+if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('section-enter');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: .13 });
+  sections.forEach(section => observer.observe(section));
+}
+</script>
+</body>
+</html>
 
