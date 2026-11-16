@@ -174,28 +174,29 @@ nav a:last-child{background:#e2f4e9;color:#205a37}
 @media(prefers-reduced-motion:reduce){.section-enter .wrap{animation:none}}
 
 .map-section{background:radial-gradient(ellipse at 70% 20%,#e0f4ee,transparent 65%),#f5fafc}
-.framework-map{margin:22px 0 0;padding:clamp(15px,3.4vw,40px);border-radius:32px;border:1px solid white;background:#ffffff9e;box-shadow:var(--shadow)}
-.map-root{width:fit-content;margin:0 auto 22px;padding:9px 20px;border-radius:24px;background:#dbefe9;text-align:center;position:relative}
-.map-root span{display:block;font-size:12px;color:var(--sub);letter-spacing:.12em;font-weight:700}
-.map-root::after{content:"";position:absolute;left:50%;bottom:-22px;height:22px;border-left:1px solid #80a99d}
-.map-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;border-top:1px solid #80a99d;padding-top:11px}
-.map-step{background:#eef5f7;border:1px solid #e0eaef;border-radius:19px;padding:13px;min-height:105px}
-.map-step>div{display:flex;align-items:center;gap:8px}
-.map-step b{color:var(--blue);font-size:26px}
-.map-step h3{font-size:18px}
-.map-step i{display:block;margin-top:8px;width:75%;height:27px;filter:blur(2.5px);background:repeating-linear-gradient(to bottom,#a4bdc7 0 4px,transparent 4px 11px);opacity:.52}
-.map-input{grid-column:span 2;background:#ebfaf0;border-color:#acdbbc}
-.map-input ol{margin:4px 0 0;padding-left:22px;color:var(--sub);font-size:15px}
-.framework-map figcaption{font-size:14px;color:var(--sub);margin-top:14px}
-@media(max-width:560px){.map-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.map-step h3{font-size:16px}}
+.framework-map{margin:22px 0 0;padding:clamp(14px,3.2vw,32px);border-radius:28px;border:1px solid #fff;background:#fff9;box-shadow:var(--shadow)}
+.framework-map figcaption{font-size:14px;color:var(--sub);margin:0 0 14px}
+.impact-stages{display:grid;gap:9px}
+.impact-stage{min-width:0;background:#f5faf9;border:1px solid #d7e7e1;border-radius:15px;overflow:hidden}
+.impact-stage[open]{background:#fcffff}
+.impact-stage>summary{display:grid;grid-template-columns:34px 1fr 20px;align-items:center;gap:10px;min-height:51px;padding:8px 13px;list-style:none;cursor:pointer}
+.impact-stage>summary::-webkit-details-marker{display:none}
+.impact-stage>summary:focus-visible{outline-offset:-3px}
+.impact-letter{display:grid;place-items:center;width:32px;height:32px;background:#dfefe8;color:#23584b;border-radius:9px;font-weight:750}
+.impact-expand{width:9px;height:9px;border-right:1.5px solid #356356;border-bottom:1.5px solid #356356;transform:rotate(45deg);justify-self:center;margin-bottom:4px}
+.impact-stage[open] .impact-expand{transform:rotate(225deg);margin-bottom:0}
+.impact-branches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 13px 13px;padding-top:10px;border-top:1px solid #d9e8e2}
+.impact-branch{min-width:0;padding:11px;background:#f0f7f4;border-radius:11px}
+.impact-branch h3{font-size:15px;line-height:1.35;margin:0 0 9px;color:#214a41}
+.impact-branch ul{padding:0 0 0 9px;margin:0 0 0 3px;border-left:1px solid #a9c9bd;list-style:none;display:grid;gap:6px}
+.impact-branch li{position:relative;padding:5px 7px;background:#fff;color:var(--sub);font-size:13px;line-height:1.4;border-radius:6px;overflow-wrap:anywhere}
+.impact-branch li::before{position:absolute;content:"";width:9px;left:-9px;top:50%;border-top:1px solid #a9c9bd}
+@media(max-width:720px){.impact-branches{grid-template-columns:1fr}.impact-branch li{font-size:14px}}
 
 .benefit{display:flex;flex-direction:column;min-width:0;padding:22px}
 .benefit .benefit-context{font-size:13px;color:#245674;font-weight:700;margin:0 0 9px}
 .benefit h3{font-size:24px}
 .benefit h3+p{margin-bottom:14px}
-.map-open{background:#ebfaf0;border-color:#acdbbc}
-.map-open ol{margin:4px 0 0;padding-left:22px;color:var(--sub);font-size:15px}
-@media(max-width:560px){.map-open{grid-column:span 2}}
 .signup-feedback:empty{display:none}
 .signup-feedback{padding:13px 15px;margin-top:6px;border:1px solid #bfdbd6;background:#eef8f8;border-radius:15px;color:#264c53}
 .signup-feedback strong,.signup-feedback span{display:block}
@@ -334,17 +335,59 @@ nav a:last-child{background:#e2f4e9;color:#205a37}
 <details name="coaching-framework" id="tracking"><summary><b>T</b><strong>Tracking</strong><span>Xác định KPI và cách đo lường</span><span class="plus" aria-hidden="true"></span></summary><p>Gắn KPI với mục tiêu chiến dịch và vai trò của từng kênh, từ Digital, Social đến PR.</p></details>
 </div></div></section>
 <section class="section map-section" id="framework-map"><div class="wrap">
-<div class="map-heading"><p class="eyebrow mono">Trích từ tài liệu coaching</p><h2>Sơ đồ I.M.P.A.C.T Framework</h2></div>
-<figure class="framework-map" aria-label="Sơ đồ sáu bước I.M.P.A.C.T. Nội dung chi tiết của hai bước Input và Mapping được hiển thị.">
-<div class="map-root"><strong>IMC Planning Framework</strong><span>I.M.P.A.C.T</span></div>
-<div class="map-grid">
-<article class="map-step map-input"><div><b>I</b><h3>Input</h3></div><ol><li>Nhận và rà soát brief</li><li>Đánh giá ngân sách, deadline và tính khả thi</li><li>Debrief để xác nhận bài toán và mục tiêu</li></ol></article>
-<article class="map-step map-open"><div><b>M</b><h3>Mapping</h3></div><ol><li>Phân biệt mục tiêu kinh doanh, marketing và truyền thông</li><li>Xác định đối tượng trọng tâm</li><li>Rà soát dữ liệu thị trường và đối thủ cần kiểm chứng</li></ol></article>
-<article class="map-step"><div><b>P</b><h3>Path</h3></div><i aria-hidden="true"></i></article>
-<article class="map-step"><div><b>A</b><h3>Action</h3></div><i aria-hidden="true"></i></article>
-<article class="map-step"><div><b>C</b><h3>Costing</h3></div><i aria-hidden="true"></i></article>
-<article class="map-step"><div><b>T</b><h3>Tracking</h3></div><i aria-hidden="true"></i></article>
-</div><figcaption>Chi tiết các bước còn lại được trình bày trong buổi coaching.</figcaption>
+<div class="map-heading"><p class="eyebrow mono">Tài liệu coaching</p><h2>Sơ đồ I.M.P.A.C.T Framework</h2></div>
+<figure class="framework-map" aria-label="Sơ đồ chi tiết sáu bước I.M.P.A.C.T">
+<figcaption>Mở từng bước để xem các hạng mục, công cụ và đầu việc tương ứng.</figcaption>
+<div class="impact-stages">
+<details class="impact-stage" open>
+  <summary><span class="impact-letter" aria-hidden="true">I</span><strong>Input</strong><span class="impact-expand" aria-hidden="true"></span></summary>
+  <div class="impact-branches">
+    <article class="impact-branch"><h3>Rà soát trước khi nhận brief</h3><ul><li>Lịch sử làm việc với khách hàng và thông tin nội bộ</li><li>Deadline, ngân sách và khối lượng công việc</li><li>Quyết định nhận brief dựa trên tính khả thi</li></ul></article>
+    <article class="impact-branch"><h3>Chuẩn bị debrief</h3><ul><li>Bài toán kinh doanh</li><li>3C Audit và nguồn tăng trưởng</li><li>Câu hỏi cần khách hàng xác nhận</li></ul></article>
+    <article class="impact-branch"><h3>Thống nhất sau debrief</h3><ul><li>Định hướng từ thương hiệu và trao đổi Q&amp;A</li><li>Xác nhận brief và mục tiêu</li><li>Thống nhất lại deadline</li></ul></article>
+  </div>
+</details>
+<details class="impact-stage" open>
+  <summary><span class="impact-letter" aria-hidden="true">M</span><strong>Mapping</strong><span class="impact-expand" aria-hidden="true"></span></summary>
+  <div class="impact-branches">
+    <article class="impact-branch"><h3>Tổ chức công việc</h3><ul><li>Kiểm tra khối lượng hiện tại</li><li>Phân công nhân sự</li><li>Lập phương án và timeline</li></ul></article>
+    <article class="impact-branch"><h3>Xác lập hướng chiến lược</h3><ul><li>G.O.S.T. · Goals, Objectives, Strategies, Tactics</li><li>SMART cho mục tiêu kinh doanh, marketing và truyền thông</li></ul></article>
+    <article class="impact-branch"><h3>Khoanh vùng đối tượng và thị trường</h3><ul><li>Địa lý, nhân khẩu học, tâm lý và hành vi</li><li>Nghiên cứu thị trường và đối thủ</li><li>Social listening, dữ liệu lịch sử, báo cáo, khảo sát và focus group</li></ul></article>
+  </div>
+</details>
+<details class="impact-stage">
+  <summary><span class="impact-letter" aria-hidden="true">P</span><strong>Path</strong><span class="impact-expand" aria-hidden="true"></span></summary>
+  <div class="impact-branches">
+    <article class="impact-branch"><h3>Xác lập insight</h3><ul><li>Insight về sản phẩm hoặc con người trong bối cảnh văn hóa</li><li>Truth–Tension–Motivation</li><li>Consumer–Company/Brand–Category Truth</li><li>Direction–Discovery–Double Check</li></ul></article>
+    <article class="impact-branch"><h3>Phát triển Big Idea</h3><ul><li>Bám nhiệm vụ truyền thông bằng Task Map</li><li>Kiểm tra khả năng triển khai, phạm vi và độ bền của ý tưởng</li><li>Chốt thông điệp chủ đạo hoặc thông điệp chiến dịch</li></ul></article>
+    <article class="impact-branch"><h3>Cụ thể hóa hướng sáng tạo</h3><ul><li>Câu chuyện truyền thông và concept</li><li>Minh họa TVC, phim ngắn hoặc chụp ảnh</li><li>Phác thảo phương án contest hoặc collab</li></ul></article>
+  </div>
+</details>
+<details class="impact-stage">
+  <summary><span class="impact-letter" aria-hidden="true">A</span><strong>Action</strong><span class="impact-expand" aria-hidden="true"></span></summary>
+  <div class="impact-branches">
+    <article class="impact-branch"><h3>Dựng các giai đoạn triển khai</h3><ul><li>Số giai đoạn theo yêu cầu chiến dịch</li><li>Mục tiêu, key hook, thông điệp và ngân sách từng giai đoạn</li><li>Quick wins, giải pháp theo 5W1H và chiến thuật hỗ trợ</li></ul></article>
+    <article class="impact-branch"><h3>Xây dựng chiến lược kênh</h3><ul><li>Mục tiêu, kế hoạch mua, chiến thuật, KPI và cách đo của từng kênh</li><li>STDC · See, Think, Do, Care</li><li>3H cho nội dung, phân tầng KOL/KOC và kế hoạch lan tỏa PR</li></ul></article>
+    <article class="impact-branch"><h3>Chuyển kế hoạch thành roadmap</h3><ul><li>Chọn công cụ phù hợp như sự kiện, activation hoặc roadshow</li><li>Phân bổ hạng mục và KPI trên roadmap</li><li>Chuẩn bị demo nội dung, chân dung KOL/KOC, demo quảng cáo và brief triển khai</li></ul></article>
+  </div>
+</details>
+<details class="impact-stage">
+  <summary><span class="impact-letter" aria-hidden="true">C</span><strong>Costing</strong><span class="impact-expand" aria-hidden="true"></span></summary>
+  <div class="impact-branches">
+    <article class="impact-branch"><h3>Chọn cách lập ngân sách</h3><ul><li>Top-down từ ngân sách tổng</li><li>Bottom-up theo từng hạng mục</li></ul></article>
+    <article class="impact-branch"><h3>Xác định căn cứ dự toán</h3><ul><li>Dữ liệu chi phí lịch sử hoặc dự toán cho hạng mục mới</li><li>Chính sách và điều kiện riêng của khách hàng</li></ul></article>
+    <article class="impact-branch"><h3>Rà soát phương án giá</h3><ul><li>Chiến lược và chính sách giá</li><li>Đối chiếu P&amp;L nội bộ</li></ul></article>
+  </div>
+</details>
+<details class="impact-stage">
+  <summary><span class="impact-letter" aria-hidden="true">T</span><strong>Tracking</strong><span class="impact-expand" aria-hidden="true"></span></summary>
+  <div class="impact-branches">
+    <article class="impact-branch"><h3>Đo theo mục tiêu chiến dịch</h3><ul><li>KPI chiến dịch gắn với mục tiêu</li><li>Digital Branding · Reach, Impression, View</li><li>Performance · Click, Engagement, Add to Cart, Lead</li></ul></article>
+    <article class="impact-branch"><h3>Đo theo vai trò từng kênh</h3><ul><li>Social · Brand Mention, Buzz</li><li>PR · Media Coverage, Sentiment, SOV, % Read</li><li>Chỉ số bổ trợ · Traffic, Conversion, Join, Play, Visit</li></ul></article>
+    <article class="impact-branch"><h3>Quản trị an toàn thương hiệu</h3><ul><li>Hướng dẫn và lưu ý về Brand Safety</li><li>Phương án xử lý khủng hoảng khi cần</li></ul></article>
+  </div>
+</details>
+</div>
 </figure></div></section>
 <section class="section coach" aria-labelledby="coach-name"><div class="wrap coach-layout">
 <div class="coach-copy"><p class="eyebrow mono">Coach</p><h2 id="coach-name">Trần Hùng Cường</h2><p class="coach-role">Giám đốc Tư vấn Chiến lược</p><p class="coach-agency">admeX Creative Media Agency · VCCorp</p>
