@@ -335,12 +335,46 @@ function showFeedback(state, title, message) {
 
 function finishRequest() {
   clearTimeout(pending.timer);
+  clearTimeout(pending.slowTimer);
+  clearTimeout(pending.pollTimer);
+  pending.pollScript?.remove();
   pending.inputs.forEach(input => input.remove());
   pending.frame.remove();
   pending = null;
   signup.removeAttribute('action');
   submitButton.disabled = false;
 }
+
+function acceptReceipt(result) {
+  if (!pending || !result || result.type !== 'admex-imc-registration' ||
+      result.nonce !== pending.nonce || !['success', 'duplicate', 'warning'].includes(result.state) ||
+      typeof result.title !== 'string' || typeof result.message !== 'string') return;
+  finishRequest();
+  if (result.state === 'success') signup.reset();
+  showFeedback(result.state, result.title, result.message);
+}
+
+function pollReceipt(request) {
+  if (pending !== request) return;
+  const url = new URL(signup.dataset.endpoint);
+  url.searchParams.set('receipt', request.nonce);
+  url.searchParams.set('_', String(Date.now()));
+  const script = document.createElement('script');
+  script.src = url.href;
+  request.pollScript = script;
+  const next = () => {
+    script.remove();
+    if (pending === request) {
+      request.pollScript = null;
+      request.pollTimer = setTimeout(() => pollReceipt(request), 2200);
+    }
+  };
+  script.onload = next;
+  script.onerror = next;
+  document.head.append(script);
+}
+
+window.admexImcReceipt = acceptReceipt;
 
 signup.addEventListener('submit', event => {
   event.preventDefault();
@@ -366,12 +400,18 @@ signup.addEventListener('submit', event => {
   });
   document.body.append(frame);
   signup.action = signup.dataset.endpoint;
-  pending = { nonce, frame, inputs, timer: setTimeout(() => {
+  const request = { nonce, frame, inputs };
+  pending = request;
+  request.timer = setTimeout(() => {
     finishRequest();
-    showFeedback('warning', 'Chưa nhận được xác nhận', 'Đăng ký có thể đã được ghi nhận. Anh/chị có thể thử lại với cùng mã nhân sự.');
-  }, 35000) };
+    showFeedback('warning', 'Hệ thống chưa xác minh được trạng thái', 'Vui lòng phản hồi email mời để ban tổ chức kiểm tra đăng ký.');
+  }, 22000);
+  request.slowTimer = setTimeout(() => {
+    showFeedback('pending', 'Đang kiểm tra trạng thái đăng ký', 'Anh/chị chưa cần gửi lại.');
+  }, 6500);
+  request.pollTimer = setTimeout(() => pollReceipt(request), 1200);
   submitButton.disabled = true;
-  showFeedback('pending', 'Đang gửi đăng ký', 'Vui lòng chờ xác nhận.');
+  showFeedback('pending', 'Đang xử lý đăng ký', 'Trạng thái sẽ hiển thị ngay bên dưới.');
   try {
     HTMLFormElement.prototype.submit.call(signup);
   } catch {
@@ -383,14 +423,7 @@ submitButton.disabled = false;
 
 window.addEventListener('message', event => {
   if (!pending || !/^https:\/\/(?:script\.google\.com|(?:[a-z0-9-]+\.)?googleusercontent\.com)$/i.test(event.origin)) return;
-  const { type, nonce, state, title, message } = event.data ?? {};
-  if (type !== 'admex-imc-registration' || nonce !== pending.nonce ||
-      !['success', 'duplicate', 'warning'].includes(state) ||
-      typeof title !== 'string' || typeof message !== 'string') return;
-
-  finishRequest();
-  if (state === 'success') signup.reset();
-  showFeedback(state, title, message);
+  acceptReceipt(event.data);
 });
 const policy = document.querySelector('#data-policy');
 document.querySelector('#open-policy').addEventListener('click', () => policy.showModal());
@@ -421,4 +454,3 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
 </script>
 </body>
 </html>
-
